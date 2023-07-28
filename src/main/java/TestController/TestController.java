@@ -14,7 +14,7 @@ public class TestController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String xxx = req.getParameter("xxx");
+		var xxx = req.getParameter("xxx");
 		req.setAttribute("nickname", xxx);
 		req.getRequestDispatcher("/index.jsp").forward(req, resp);
 	}
